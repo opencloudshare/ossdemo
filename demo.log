@@ -1,0 +1,18 @@
+[I 190515 13:18:51 autoreload:204] demo_front_public.py modified; restarting server
+[W 190515 13:48:39 web:1971] 404 GET / (172.28.12.252) 4.57ms
+[W 190515 13:48:39 web:1971] 404 GET /favicon.ico (172.28.12.252) 1.46ms
+[I 190515 13:48:47 web:1971] 200 GET /list (172.28.12.252) 48.52ms
+[I 190515 13:48:47 web:1971] 200 GET /static/assets/css/reset.css (172.28.12.252) 1.76ms
+[I 190515 13:48:47 web:1971] 200 GET /static/assets/css/supersized.css (172.28.12.252) 0.65ms
+[I 190515 13:48:47 web:1971] 200 GET /static/css/styles.css (172.28.12.252) 1.04ms
+[I 190515 13:48:47 web:1971] 200 GET /static/assets/css/style.css (172.28.12.252) 0.73ms
+[I 190515 13:48:47 web:1971] 200 GET /static/assets/js/supersized.3.2.7.min.js (172.28.12.252) 0.84ms
+[I 190515 13:48:47 web:1971] 200 GET /static/assets/js/supersized-init.js (172.28.12.252) 0.82ms
+[I 190515 13:48:47 web:1971] 200 GET /static/assets/js/scripts.js (172.28.12.252) 0.77ms
+[I 190515 13:48:47 web:1971] 200 GET /static/js/jquery-2.1.1.min.js (172.28.12.252) 60.20ms
+[I 190515 13:48:47 web:1971] 200 GET /static/assets/js/jquery-1.8.2.min.js (172.28.12.252) 77.33ms
+[I 190515 13:48:47 web:1971] 200 GET /static/assets/flv/flv.min.js (172.28.12.252) 94.78ms
+[I 190515 13:48:48 web:1971] 200 GET /static/assets/img/backgrounds/1.jpg (172.28.12.252) 1.94ms
+[I 190515 13:48:48 web:1971] 200 GET /static/assets/img/backgrounds/3.jpg (172.28.12.252) 0.92ms
+[I 190515 13:48:48 web:1971] 200 GET /static/assets/img/backgrounds/2.jpg (172.28.12.252) 0.97ms
+[I 190515 13:48:48 web:1971] 200 GET /static/assets/img/progress.gif (172.28.12.252) 0.65ms

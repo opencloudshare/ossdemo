@@ -1,0 +1,90 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>{{ title }}</title>
+
+<script src="/static/assets/flv/flv.min.js"></script>
+
+<style type="text/css">
+body{;}
+.wrapper{height:400;width:800;position:absolute;margin:-200 0 0 -400;left:50%;top:50%;}
+button{
+cursor: pointer;
+    width: 170px;
+    height: 44px;
+    margin-top: 0;
+    padding: 0;
+    //background: #ef4300;
+    background-color: black;
+    border-radius: 6px;
+    border: 1px solid #ff730e;
+    box-shadow: 0 15px 30px 0 rgba(255,255,255,.25) inset, 0 2px 7px 0 rgba(0,0,0,.2);
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,.1);
+    -webkit-transition: all .2s;
+;}
+</style>
+<body>
+<div class="wrapper">
+<video height=400 id="videoElement"></video>
+<div class="controls">
+        <button onclick="flv_load()">加载</button>
+        <button onclick="flv_start()">开始</button>
+        <button onclick="flv_pause()">暂停</button>
+        <button onclick="flv_destroy()">停止</button>
+     <!--   <input style="width:100px" type="text" name="seekpoint" />
+        <button onclick="flv_seekto()">跳转</button> -->
+    </div>
+</div>
+</body>
+
+    <script>
+        var player = document.getElementById('videoElement');
+        if (flvjs.isSupported()) {
+            var flvPlayer = flvjs.createPlayer({
+                type: 'mp4',
+                url: '{{ link }}'
+            });
+            flvPlayer.attachMediaElement(videoElement);
+        }
+
+        function flv_load() {
+            flvPlayer.load(); //加载
+        }
+
+        function flv_start() {
+            player.play();
+        }
+
+        function flv_pause() {
+            player.pause();
+        }
+
+        function flv_destroy() {
+            player.pause();
+            player.unload();
+            player.detachMediaElement();
+            player.destroy();
+            player = null;
+        }
+
+        function flv_seekto() {
+            player.currentTime = parseFloat(document.getElementsByName('seekpoint')[0].value);
+        }
+    </script>
+
+<!--
+<script>
+    if (flvjs.isSupported()) {
+        var videoElement = document.getElementById('videoElement');
+        var flvPlayer = flvjs.createPlayer({
+            type: 'mp4',
+            url: 'http://172.20.2.155:7480/demo-public-read-bucket/85d92223cbf4fe6c97d370962ba77be2.mp4-15%3A56%3A24'
+        });
+        flvPlayer.attachMediaElement(videoElement);
+        flvPlayer.load();
+        flvPlayer.play();
+    }
+</script>
+-->
